@@ -48,9 +48,9 @@
     <Compile Include="PerfectNumber.cs" />
     <Compile Include="PrimeNumber.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseNumber.cs" />
+    <Compile Include="StopwatchProgram.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,27 +11,24 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number of distinct coupon numbers:");
-            int n = int.Parse(Console.ReadLine());
+            Stopwatch stopwatch = new Stopwatch();
 
-            int[] couponNumbers = GenerateDistinctCoupons(n);
-            CouponNumbers coupon = new CouponNumbers(couponNumbers);
-            int attempts = coupon.GenerateDistinctCoupons();
-
-            Console.WriteLine("Total random numbers needed to have all distinct numbers: " + attempts);
-        }
-
-        private static int[] GenerateDistinctCoupons(int n)
-        {
-            int[] coupons = new int[n];
-            Random random = new Random();
-
-            for (int i = 0; i < n; i++)
+            Console.WriteLine("Press 's' to start the stopwatch:");
+            if (Console.ReadKey().KeyChar == 's')
             {
-                coupons[i] = random.Next(1, 1000); // Adjust the range as per your requirement
+                Console.WriteLine();
+                stopwatch.Start();
             }
 
-            return coupons;
+            Console.WriteLine("Press 'e' to stop the stopwatch:");
+            if (Console.ReadKey().KeyChar == 'e')
+            {
+                Console.WriteLine();
+                stopwatch.Stop();
+            }
+
+           // TimeSpan elapsedTime = stopwatch.();
+           // Console.WriteLine("Elapsed time: " + elapsedTime.TotalSeconds + " seconds");
         }
     }
 }
