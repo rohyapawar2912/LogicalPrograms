@@ -10,11 +10,13 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number to check if it is prime:");
+            Console.WriteLine("Enter a number to reverse:");
             int number = int.Parse(Console.ReadLine());
 
-            PrimeNumber primeNumber = new PrimeNumber(number);
-            primeNumber.CheckPrimeNumber();
+            ReverseNumber reverseNumber = new ReverseNumber(number);
+            int reversedNumber = reverseNumber.Reverse();
+
+            Console.WriteLine("Reversed number: " + reversedNumber);
         }
     }
 }
