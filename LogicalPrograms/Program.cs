@@ -10,17 +10,11 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number to check if it is perfect:");
+            Console.WriteLine("Enter a number to check if it is prime:");
             int number = int.Parse(Console.ReadLine());
 
-            if (number <= 0)
-            {
-                Console.WriteLine("Invalid input. Number must be a positive integer.");
-                return;
-            }
-
-            PerfectNumber perfectNumber = new PerfectNumber(number);
-            perfectNumber.CheckPerfectNumber();
+            PrimeNumber primeNumber = new PrimeNumber(number);
+            primeNumber.CheckPrimeNumber();
         }
     }
 }
