@@ -10,17 +10,17 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the count of terms in the Fibonacci series:");
-            int count = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a number to check if it is perfect:");
+            int number = int.Parse(Console.ReadLine());
 
-            if (count <= 0)
+            if (number <= 0)
             {
-                Console.WriteLine("Invalid input. Count must be a positive integer.");
+                Console.WriteLine("Invalid input. Number must be a positive integer.");
                 return;
             }
 
-            FibonacciSeries fibonacciSeries = new FibonacciSeries(count);
-            fibonacciSeries.GenerateSeries();
+            PerfectNumber perfectNumber = new PerfectNumber(number);
+            perfectNumber.CheckPerfectNumber();
         }
     }
 }
